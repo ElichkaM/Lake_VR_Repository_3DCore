@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.kink3d.mirrors": "file:C:/Users/nitya/Downloads/kMirrors-master/kMirrors-master",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.universal": "14.0.8",

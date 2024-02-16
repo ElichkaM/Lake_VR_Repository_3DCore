@@ -36,6 +36,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Foam_Texture:
+        m_Texture: {fileID: 2800000, guid: 0a1e0a7d5f7fcd844ae0b37545aa33cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal_Map:
         m_Texture: {fileID: 2800000, guid: 9028ca31ed0f835488b383a89c8d5952, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -59,7 +63,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth: 3
-    - _Depth_Fade: 0.2
+    - _Depth_Fade: 0.1
+    - _Foam: 0
+    - _Foam_Scale: 2.67
     - _Lerp: 0.208
     - _Normal_Strength: 0.4
     - _QueueControl: 0
@@ -69,10 +75,10 @@ Material:
     - _Smoothness: 0.917
     - _Water_Lerp: 0.538
     m_Colors:
-    - _Albedo: {r: 0.65471697, g: 0.9745405, b: 1, a: 0}
+    - _Albedo: {r: 0.14528298, g: 0.6642551, b: 1, a: 0}
     - _UV1: {r: 4, g: 4, b: -0.03, a: 0.28}
-    - _UV_1: {r: 9, g: 9, b: -0.03, a: 0.3}
-    - _UV_2: {r: 4, g: 4, b: 0, a: 0}
+    - _UV_1: {r: 10, g: 10, b: -0.03, a: 0.3}
+    - _UV_2: {r: 5, g: 5, b: 0, a: 0}
     - _Water_Speed_1: {r: 0.05, g: 0.05, b: 0, a: 0}
     - _Water_Speed_2: {r: -0.03, g: -0.03, b: 0, a: 0}
   m_BuildTextureStacks: []

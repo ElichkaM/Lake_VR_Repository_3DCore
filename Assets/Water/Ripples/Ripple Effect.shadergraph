@@ -274,7 +274,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Ripple Texture",
     "m_DefaultReferenceName": "_Ripple_Texture",
-    "m_OverrideReferenceName": "_RippleTexture",
+    "m_OverrideReferenceName": "_RippleTex",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",

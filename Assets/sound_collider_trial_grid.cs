@@ -18,7 +18,7 @@ public class Sound_collider_trial_grid
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("XYZ"))
+        if (other.CompareTag("Audio Trigger"))
         {
             if (!audioSource.isPlaying)
             {

@@ -123,44 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!84 &162570402
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1063
-  m_Height: 515
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 90
-  m_ColorFormat: 8
-  m_MipMap: 1
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &170698870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,7 +176,8 @@ PrefabInstance:
       value: RockShortFlat_C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 06e8994a9ab2b054f9e015faa8411586, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e8994a9ab2b054f9e015faa8411586, type: 3}
@@ -519,6 +482,9 @@ MonoBehaviour:
   m_TextureScale: 1
   m_AllowHDR: 0
   m_AllowMSAA: 0
+  m_ReflectionCamera: {fileID: 574292581}
+  m_CameraData: {fileID: 574292580}
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &574292580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,7 +570,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 162570402}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -682,7 +648,8 @@ PrefabInstance:
       value: RockShortFlat_E
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: fdd0fbc7e7ef9d845a590d0c8aed3884, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd0fbc7e7ef9d845a590d0c8aed3884, type: 3}
@@ -927,7 +894,8 @@ PrefabInstance:
       value: RockShortFlat_F
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 0f4915fbd1d20a345860a76093187b36, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4915fbd1d20a345860a76093187b36, type: 3}
@@ -1090,7 +1058,8 @@ PrefabInstance:
       value: RockShortFlat_D
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 562220d33e06b5f439ff2f3a71cda859, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562220d33e06b5f439ff2f3a71cda859, type: 3}
@@ -1179,7 +1148,8 @@ PrefabInstance:
       value: RockShortFlat_A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 66646ff24adb5474e84bf09d4ad2ceb3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66646ff24adb5474e84bf09d4ad2ceb3, type: 3}

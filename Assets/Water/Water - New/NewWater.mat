@@ -59,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth: 3
-    - _Depth_Fade: 0.03
+    - _Depth_Fade: 0.2
     - _Lerp: 0.208
     - _Normal_Strength: 0.4
     - _QueueControl: 0
@@ -67,7 +67,7 @@ Material:
     - _Reflection_Refraction: 0.12
     - _Refraction: 0.04
     - _Smoothness: 0.917
-    - _Water_Lerp: 0.5
+    - _Water_Lerp: 0.538
     m_Colors:
     - _Albedo: {r: 0.65471697, g: 0.9745405, b: 1, a: 0}
     - _UV1: {r: 4, g: 4, b: -0.03, a: 0.28}

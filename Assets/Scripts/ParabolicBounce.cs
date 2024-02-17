@@ -4,21 +4,38 @@ using UnityEngine;
 
 public class ParabolicBounce : MonoBehaviour
 {
-Vector3 gravity = new Vector3 (0, 9.8f, 0);
-Vector3 velocity = new Vector3 (5, 15, 7);
-    // Start is called before the first frame update
+    public float gravity = -9.81f; // Gravity force
+
+    private Rigidbody rb;
+    private Vector3 initialPosition;
+    private bool isThrown = false;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        initialPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Update velocity via Newtons law
-    velocity += gravity * Time.deltaTime;
-   
-     // Update position
-     transform.position += velocity * Time.deltaTime;
+    }
+
+    void ThrowObject()
+    {
+        Vector3 throwDirection = (transform.position - initialPosition).normalized;
+        rb.velocity = throwDirection * CalculateThrowForce();
+
+        // Apply gravity to the object
+        rb.useGravity = true;
+        rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);
+
+        isThrown = true;
+    }
+
+    float CalculateThrowForce()
+    {
+        // Calculate throw force based on the velocity of the object's Rigidbody component
+        return rb.velocity.magnitude;
     }
 }
+

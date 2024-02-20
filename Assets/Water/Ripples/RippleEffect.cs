@@ -22,12 +22,10 @@ public class RippleEffect : MonoBehaviour
 
         //Change the texture in the material of this object to the render texture calculated by the ripple shader.
         GetComponent<Renderer>().material.SetTexture("_RippleTex", CurrRT);
-
-        StartCoroutine(ripples());
     }
 
     // Update is called once per frame
-    IEnumerator ripples()
+    void FixedUpdate()
     {
         //Copy the result of blending the render textures to TempRT.
         AddMat.SetTexture("_ObjectsRT", ObjectsRT);
@@ -48,9 +46,5 @@ public class RippleEffect : MonoBehaviour
         RenderTexture rt = PrevRT;
         PrevRT = CurrRT;
         CurrRT = rt;
-
-        //Wait for one frame and then execute again.
-        yield return null;
-        StartCoroutine(ripples());
     }
 }

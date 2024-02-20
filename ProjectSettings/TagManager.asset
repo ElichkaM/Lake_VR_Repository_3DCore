@@ -8,6 +8,7 @@ TagManager:
   - Audio Trigger
   - Obstacle
   - Camera.main
+  - hand
   layers:
   - Default
   - TransparentFX

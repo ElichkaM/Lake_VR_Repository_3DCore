@@ -11,6 +11,9 @@ public class RockInteraction : MonoBehaviour
     {
         // Assuming the plane_to_glow object has a MeshRenderer component and the glowing material is assigned in the Unity Editor
         planeMaterial = planeToGlow.GetComponent<MeshRenderer>().material;
+
+        // Disable the emission property initially
+        planeMaterial.DisableKeyword("_EMISSION");
     }
 
     private void OnGrab(XRBaseInteractor interactor)

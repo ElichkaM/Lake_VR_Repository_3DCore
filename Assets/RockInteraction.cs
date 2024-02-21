@@ -21,6 +21,7 @@ public class RockInteraction : MonoBehaviour
         if (!isHeld)
         {
             isHeld = true;
+            Debug.Log("Rock is grabbed, activating plane's emission.");
             // Activate the plane's emission when a rock is picked up
             planeMaterial.EnableKeyword("_EMISSION");
         }
@@ -31,6 +32,7 @@ public class RockInteraction : MonoBehaviour
         if (isHeld)
         {
             isHeld = false;
+            Debug.Log("Rock is released, deactivating plane's emission.");
             // Deactivate the plane's emission when a rock is released
             planeMaterial.DisableKeyword("_EMISSION");
         }
@@ -38,8 +40,10 @@ public class RockInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger entered.");
         if (other.CompareTag("Audio Trigger"))
         {
+            Debug.Log("Rock with Audio Trigger tag entered trigger area.");
             // Assign the interaction events when a rock with "Audio Trigger" tag enters the trigger area
             XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)

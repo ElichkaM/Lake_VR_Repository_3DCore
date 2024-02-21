@@ -15,7 +15,7 @@ public class GlowingFlowerController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the collider entering the trigger is the player or another object you want to trigger the effect
-        if (other.CompareTag("Player")) // Change "Player" to the appropriate tag
+        if (other.CompareTag("hand")) // Change "Player" to the appropriate tag
         {
             // Start the Glowing Pollen particle system
             glowingPollen.Play();

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 public class RockInteraction : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class RockInteraction : MonoBehaviour
         planeMaterial.DisableKeyword("_EMISSION");
     }
 
-    private void OnGrab(XRBaseInteractor interactor)
+    private void OnGrab(SelectEnterEventArgs args)
     {
         if (!isHeld)
         {
@@ -26,7 +27,7 @@ public class RockInteraction : MonoBehaviour
         }
     }
 
-    private void OnRelease(XRBaseInteractor interactor)
+    private void OnRelease(SelectExitEventArgs args)
     {
         if (isHeld)
         {
@@ -44,8 +45,8 @@ public class RockInteraction : MonoBehaviour
             XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
             {
-                grabInteractable.onSelectEntered.AddListener(OnGrab);
-                grabInteractable.onSelectExited.AddListener(OnRelease);
+                grabInteractable.selectEntered.AddListener(OnGrab);
+                grabInteractable.selectExited.AddListener(OnRelease);
             }
         }
     }

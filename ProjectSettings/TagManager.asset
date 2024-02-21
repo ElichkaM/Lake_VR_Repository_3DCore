@@ -11,6 +11,7 @@ TagManager:
   - hand
   - Controller
   - glowingPlane
+  - collider_for_lake_glow
   layers:
   - Default
   - TransparentFX

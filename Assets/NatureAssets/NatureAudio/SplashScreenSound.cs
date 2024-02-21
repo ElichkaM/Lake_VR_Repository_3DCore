@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SplashScreenSound : MonoBehaviour
+public class NightModeController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Material daySkybox;
+    public Material nightSkybox;
+    public GameObject owlObject;
+
+    private bool nightModeActivated = false;
+
     void Start()
     {
-        Invoke("LoadMainGame", 6f);
+        // Ensure the owl object is assigned
+        if (owlObject == null)
+        {
+            Debug.LogError("Owl object is not assigned!");
+        }
     }
 
-    void LoadMainGame()
+    void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(1);
+        // Check if the collision is with the owl object
+        if (collision.gameObject == owlObject)
+        {
+            ToggleNightMode();
+        }
+    }
+
+    void ToggleNightMode()
+    {
+        nightModeActivated = !nightModeActivated;
+
+        // Change the skybox material based on the night mode status
+        RenderSettings.skybox = nightModeActivated ? nightSkybox : daySkybox;
     }
 }

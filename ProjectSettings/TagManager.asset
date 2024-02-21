@@ -12,6 +12,7 @@ TagManager:
   - Controller
   - glowingPlane
   - collider_for_lake_glow
+  - Sunflower
   layers:
   - Default
   - TransparentFX

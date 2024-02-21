@@ -10,6 +10,7 @@ TagManager:
   - Camera.main
   - hand
   - Controller
+  - glowingPlane
   layers:
   - Default
   - TransparentFX

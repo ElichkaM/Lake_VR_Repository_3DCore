@@ -4067,6 +4067,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4057455473261772365, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057455475218096599, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4168399291007773417, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -57204,7 +57212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 43380a94086ca38429797379f762cc8c, type: 2}
+  - {fileID: -7920497051216364292, guid: b18ecf061c91da1439b820dd542f206d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57244,7 +57252,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 1.9
-  m_AngularDrag: 45
+  m_AngularDrag: 60
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}

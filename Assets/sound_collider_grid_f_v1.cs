@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class sound_collider_grid_f_v1
-    : MonoBehaviour
+public class sound_collider_grid_f_v1 : MonoBehaviour
 {
     public AudioClip audioClip; // Assign your audio clip in the Unity Editor
     private AudioSource audioSource;
+
+    private bool isColliding = false;
 
     void Start()
     {
@@ -20,10 +21,20 @@ public class sound_collider_grid_f_v1
     {
         if (other.CompareTag("Audio Trigger"))
         {
-            if (!audioSource.isPlaying)
+            if (!isColliding)
             {
                 audioSource.Play();
+                isColliding = true;
             }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Audio Trigger"))
+        {
+            isColliding = false;
+            audioSource.Stop();
         }
     }
 }

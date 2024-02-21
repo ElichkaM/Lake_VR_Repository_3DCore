@@ -3,7 +3,10 @@ guid: 2ae8af7861777f247b190bf2a10099e4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ObjectsRT: {instanceID: 0}
+  - RippleShader: {fileID: 4800000, guid: d8de404977b685d46906149f2ae51da3, type: 3}
+  - AddShader: {fileID: 4800000, guid: ac2a9d0c4f2497d42b622cba59fafc48, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

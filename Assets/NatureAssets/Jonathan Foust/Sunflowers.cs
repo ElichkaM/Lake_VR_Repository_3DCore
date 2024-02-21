@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SunflowerController : MonoBehaviour
 {
-    // The name of the sunflower to track
-    public string sunflowerName = "Sunflower";
+    // The names of the sunflowers to track
+    public string[] sunflowerNames = { "Sunflower 1", "Sunflower 1 (3)", "Sunflower 1 (7)" };
 
     // Update is called once per frame
     void Update()
@@ -11,16 +11,19 @@ public class SunflowerController : MonoBehaviour
         // Get the position of the player's head
         Vector3 headPosition = Camera.main.transform.position;
 
-        // Find all sunflowers with the specified name
+        // Find all sunflowers with the specified names
         GameObject[] sunflowers = GameObject.FindGameObjectsWithTag("Sunflower");
 
         foreach (GameObject sunflower in sunflowers)
         {
-            // Check if the sunflower's name contains the specified name
-            if (sunflower.name.Contains(sunflowerName))
+            // Check if the sunflower's name matches any of the specified names
+            foreach (string name in sunflowerNames)
             {
-                // Rotate the sunflower to face the player's head position
-                sunflower.transform.LookAt(headPosition);
+                if (sunflower.name.Contains(name))
+                {
+                    // Rotate the sunflower to face the player's head position
+                    sunflower.transform.LookAt(headPosition);
+                }
             }
         }
     }

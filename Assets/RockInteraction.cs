@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.Events;
 
 public class RockInteraction : MonoBehaviour
 {
@@ -42,7 +41,7 @@ public class RockInteraction : MonoBehaviour
         if (other.CompareTag("AudioTrigger"))
         {
             // Assign the interaction events when a rock with "AudioTrigger" tag enters the trigger area
-            XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+            XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
             {
                 grabInteractable.selectEntered.AddListener(OnGrab);

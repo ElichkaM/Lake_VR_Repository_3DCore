@@ -21,7 +21,7 @@ public class GlowingFlowerController : MonoBehaviour
             glowingPollen.Play();
 
             // Start a coroutine to stop the particle system after 2 seconds
-            StartCoroutine(StopParticleAfterDelay(2f));
+            StartCoroutine(StopParticleAfterDelay(3f));
         }
     }
 

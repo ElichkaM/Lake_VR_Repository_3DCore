@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using OculusSampleFramework;
 
 public class SunflowerController : MonoBehaviour
 {
@@ -6,25 +8,35 @@ public class SunflowerController : MonoBehaviour
     public string[] sunflowerNames = { "Sunflower 1", "Sunflower 1 (3)", "Sunflower 1 (7)" };
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        // Get the position of the player's head
-        Vector3 headPosition = Camera.main.transform.position;
+        StartCoroutine(RotateSunflowersWithDelay());
+    }
 
-        // Find all sunflowers with the specified names
-        GameObject[] sunflowers = GameObject.FindGameObjectsWithTag("Sunflower");
-
-        foreach (GameObject sunflower in sunflowers)
+    IEnumerator RotateSunflowersWithDelay()
+    {
+        while (true)
         {
-            // Check if the sunflower's name matches any of the specified names
-            foreach (string name in sunflowerNames)
+            // Get the position of the player's head
+            Vector3 headPosition = Camera.main.transform.position;
+
+            // Find all sunflowers with the specified names
+            GameObject[] sunflowers = GameObject.FindGameObjectsWithTag("Sunflower");
+
+            foreach (GameObject sunflower in sunflowers)
             {
-                if (sunflower.name.Contains(name))
+                // Check if the sunflower's name matches any of the specified names
+                foreach (string name in sunflowerNames)
                 {
-                    // Rotate the sunflower to face the player's head position
-                    sunflower.transform.LookAt(headPosition);
+                    if (sunflower.name.Contains(name))
+                    {
+                        // Rotate the sunflower to face the player's head position
+                        sunflower.transform.LookAt(headPosition);
+                    }
                 }
             }
+
+            yield return new WaitForSeconds(1f); // 1 second delay before rotating again
         }
     }
 }

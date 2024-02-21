@@ -18901,7 +18901,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -18909,7 +18909,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.5911817, b: 0.15471691, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -18917,7 +18917,7 @@ ParticleSystem:
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 13685
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -18934,7 +18934,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -22366,7 +22366,7 @@ Transform:
   m_GameObject: {fileID: 615182080}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 37.8, y: -15.92, z: 186.31}
+  m_LocalPosition: {x: 47.08, y: -19.03, z: 204.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28881,7 +28881,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 2105482626}
+  m_TargetTexture: {fileID: 1647737267}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -32722,7 +32722,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4be5bf01191525b489c7604c1198ff8d, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -54530,7 +54531,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4be5bf01191525b489c7604c1198ff8d, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -55103,6 +55105,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 09014e39046d9634c89e35747d1c6d38, type: 3}
   m_PrefabInstance: {fileID: 1645300674}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1647737267
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1163
+  m_Height: 507
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 90
+  m_ColorFormat: 8
+  m_MipMap: 1
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1649056190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71522,6 +71562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1379863184}
     m_Modifications:
+    - target: {fileID: 100000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
+      propertyPath: m_Name
+      value: Glow Flower 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
       propertyPath: m_Name
       value: Glow Flower 1
@@ -71586,7 +71630,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4be5bf01191525b489c7604c1198ff8d, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -71595,7 +71640,10 @@ PrefabInstance:
       addedObject: {fileID: 2044745289}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2044745288}
+      addedObject: {fileID: 2044745292}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2044745291}
   m_SourcePrefab: {fileID: 100100000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
 --- !u!4 &2044745286 stripped
 Transform:
@@ -71607,8 +71655,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
   m_PrefabInstance: {fileID: 2044745285}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &2044745288
-MeshCollider:
+--- !u!114 &2044745289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044745287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6f4da0669fcbd4987238c80600eef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingPollen: {fileID: 615182082}
+--- !u!1 &2044745290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c53e2ff4f6c79fa4c9721a1cbacf11ba, type: 3}
+  m_PrefabInstance: {fileID: 2044745285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044745291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044745290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6f4da0669fcbd4987238c80600eef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingPollen: {fileID: 615182082}
+--- !u!136 &2044745292
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -71625,23 +71704,11 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &2044745289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044745287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6f4da0669fcbd4987238c80600eef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glowingPollen: {fileID: 615182082}
+  serializedVersion: 2
+  m_Radius: 1.52
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.71, z: 0}
 --- !u!1 &2050597913
 GameObject:
   m_ObjectHideFlags: 0
@@ -73236,44 +73303,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4827828092187682, guid: 334e48308b58be0438475c2070af5368, type: 3}
   m_PrefabInstance: {fileID: 2105424767}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &2105482626
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1163
-  m_Height: 507
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 90
-  m_ColorFormat: 8
-  m_MipMap: 1
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &2123900317
 PrefabInstance:
   m_ObjectHideFlags: 0

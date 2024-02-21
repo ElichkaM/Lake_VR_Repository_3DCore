@@ -1512,9 +1512,13 @@ PrefabInstance:
       propertyPath: _hmd
       value: 
       objectReference: {fileID: 408140792}
+    - target: {fileID: 5329703760716487890, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+      propertyPath: m_TagString
+      value: hand
+      objectReference: {fileID: 0}
     - target: {fileID: 5429089988281390791, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_TagString
-      value: Controller
+      value: hand
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1564,6 +1568,14 @@ PrefabInstance:
       propertyPath: _hmd
       value: 
       objectReference: {fileID: 408140792}
+    - target: {fileID: 7141916903633525487, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+      propertyPath: m_TagString
+      value: hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192733393219059812, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+      propertyPath: m_TagString
+      value: hand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4164,6 +4176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3663445f9d60d6449b36a7938c93ebea, type: 3}
+--- !u!1 &1298736177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4029759104594110088, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+  m_PrefabInstance: {fileID: 408140789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1316172311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4222,7 +4239,7 @@ PrefabInstance:
       objectReference: {fileID: 1946238664}
     - target: {fileID: 3859188813232032367, guid: b6e5411f1b2c1fd4ab99a43d2142ea16, type: 3}
       propertyPath: _externalVelocityInfluence
-      value: 0
+      value: 0.561
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4382,9 +4399,13 @@ PrefabInstance:
       propertyPath: _controllerButtonUsage
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4671273333192483934, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
+      propertyPath: m_TagString
+      value: hand
+      objectReference: {fileID: 0}
     - target: {fileID: 5841275377555521838, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
       propertyPath: m_TagString
-      value: GameController
+      value: hand
       objectReference: {fileID: 0}
     - target: {fileID: 5841275377868706828, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4431,6 +4452,14 @@ PrefabInstance:
       value: ControllerGrabInteractorRight
       objectReference: {fileID: 0}
     - target: {fileID: 8083374275553239747, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 1298736177}
+    - target: {fileID: 8083374275553239747, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
+      propertyPath: _activeState
+      value: 
+      objectReference: {fileID: 1339239968}
+    - target: {fileID: 8083374275553239747, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
       propertyPath: _velocityCalculator
       value: 
       objectReference: {fileID: 1316172313}
@@ -4448,6 +4477,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5841275377868706828, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
   m_PrefabInstance: {fileID: 1339239965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1339239968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8610105883944576685, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
+  m_PrefabInstance: {fileID: 1339239965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3673df66324d8f34d9433049c54de631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406223076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +4540,7 @@ GameObject:
   - component: {fileID: 1412050374}
   - component: {fileID: 1412050373}
   - component: {fileID: 1412050372}
+  - component: {fileID: 1412050382}
   m_Layer: 0
   m_Name: pebble
   m_TagString: Audio Trigger
@@ -4723,6 +4764,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 884477041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412050382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412050370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b867ea265018a3d439c5c2973895614e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwMultiplier: 50
 --- !u!1001 &1415180789
 PrefabInstance:
   m_ObjectHideFlags: 0

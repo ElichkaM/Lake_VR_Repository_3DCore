@@ -4,36 +4,33 @@ using UnityEngine;
 
 public class ParabolicTrajectory : MonoBehaviour
 {
-     private Vector3 initialGrabPosition;
+        [SerializeField] private float throwMultiplier = 2f;
+
     private Rigidbody rb;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnGrabBegin()
+    void OnCollisionEnter(Collision collision)
     {
-        initialGrabPosition = transform.position;
+        if (collision.collider.CompareTag("hand"))
+        {
+            ThrowObject();
+        }
     }
 
-    private void OnGrabEnd()
+    private void ThrowObject()
     {
-        // Calculate trajectory and apply force
-        Vector3 releasePosition = transform.position;
-        Vector3 throwDirection = releasePosition - initialGrabPosition;
+        // Get the velocity of the controller at the time of collision
+        Vector3 controllerVelocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
 
-        // Calculate initial velocity based on the release position and initial grab position
-        // Use physics calculations to determine the required velocity to follow the parabolic trajectory
-        // Apply the calculated velocity as a force to the Rigidbody
-        rb.AddForce(throwDirection.normalized * CalculateThrowVelocity(throwDirection), ForceMode.VelocityChange);
+        // Calculate throw velocity based on controller velocity
+        Vector3 throwVelocity = controllerVelocity.normalized * controllerVelocity.magnitude * throwMultiplier;
+
+        // Apply throw velocity to the object's Rigidbody
+        rb.velocity = throwVelocity;
     }
 
-    private float CalculateThrowVelocity(Vector3 throwDirection)
-    {
-        // Implement parabolic trajectory calculation logic here
-        // Example: Calculate the required velocity based on the throw direction and distance
-        // You may need to adjust this logic based on your specific requirements
-        return throwDirection.magnitude * 2f;
-    }
 }

@@ -4079,6 +4079,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6743473520592219799, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: _trendVelocityInfluence
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743473520592219799, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: _instantVelocityInfluence
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743473520592219799, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: _externalVelocityInfluence
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743473520592219799, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: _tangentialVelocityInfluence
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6790054800347538434, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -57158,7 +57174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f9c53fd89dcfb40b62bf69a76a9164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -9.81
+  gravity: -10
 --- !u!114 &1974740663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57252,7 +57268,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 1.9
-  m_AngularDrag: 60
+  m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}

@@ -38,9 +38,9 @@ public class RockInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("AudioTrigger"))
+        if (other.CompareTag("Audio Trigger"))
         {
-            // Assign the interaction events when a rock with "AudioTrigger" tag enters the trigger area
+            // Assign the interaction events when a rock with "Audio Trigger" tag enters the trigger area
             XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
             {

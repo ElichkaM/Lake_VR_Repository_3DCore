@@ -24070,10 +24070,10 @@ GameObject:
   - component: {fileID: 902624175}
   - component: {fileID: 902624181}
   - component: {fileID: 902624180}
+  - component: {fileID: 902624176}
   - component: {fileID: 902624179}
   - component: {fileID: 902624178}
   - component: {fileID: 902624177}
-  - component: {fileID: 902624176}
   m_Layer: 0
   m_Name: pebble
   m_TagString: Audio Trigger

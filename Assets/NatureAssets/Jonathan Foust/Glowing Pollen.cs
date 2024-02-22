@@ -1,9 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using OculusSampleFramework; // Import the Oculus Integration namespace
 
 public class GlowingFlowerController : MonoBehaviour
 {
     public ParticleSystem glowingPollen; // Reference to the Glowing Pollen particle system
+    public AudioClip hapticAudioClip; // Audio clip for haptic feedback
 
     void Start()
     {
@@ -20,7 +22,11 @@ public class GlowingFlowerController : MonoBehaviour
             // Start the Glowing Pollen particle system
             glowingPollen.Play();
 
-            // Start a coroutine to stop the particle system after 2 seconds
+            // Trigger haptic feedback when the player's hand collides with the flower
+            OVRHapticsClip hapticsClip = new OVRHapticsClip(hapticAudioClip);
+            OVRHaptics.RightChannel.Mix(hapticsClip);
+
+            // Start a coroutine to stop the particle system after a delay
             StartCoroutine(StopParticleAfterDelay(3f));
         }
     }

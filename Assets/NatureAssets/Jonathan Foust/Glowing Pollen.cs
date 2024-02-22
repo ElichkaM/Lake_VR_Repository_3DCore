@@ -44,7 +44,7 @@ public class GlowingFlowerController : MonoBehaviour
     IEnumerator StopParticleAfterDelay(float delay)
     {
         // Wait for the specified delay
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(2f);
 
         // Stop the Glowing Pollen particle system
         glowingPollen.Stop();

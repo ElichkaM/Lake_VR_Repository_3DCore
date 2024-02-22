@@ -789,7 +789,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: bbcb6efe2103088488e57cd8c5166943, type: 2}
   - {fileID: 2100000, guid: 1cc6e6796f833a94f94e6d794ca654c3, type: 2}
   events: []
-  hapticAudioClip: {fileID: 8300000, guid: a1d4b5e3cb1a93e4d8a0166fb63b276b, type: 3}
+  hapticAudioClip: {fileID: 8300000, guid: 0bf27a05d65e2724b8cbd073c52f4397, type: 3}
   collisionAudioClip: {fileID: 8300000, guid: a1d4b5e3cb1a93e4d8a0166fb63b276b, type: 3}
 --- !u!114 &5949677
 MonoBehaviour:

@@ -12,11 +12,11 @@ public class NightMode : MonoBehaviour
     [SerializeField] private UnityEvent[] events; // Unity events to trigger when changing skybox
 
     private int currentIndex = 0; // Index of the current skybox material
-    private bool isGrabbing = false; // Flag to track if the object is being grabbed
+    private bool isGrabbing =false; // Flag to track if the object is being grabbed
 
     private void Update()
     {
-        if (isGrabbing && OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)) // Check if the primary hand trigger is pressed while grabbing
+        if (isGrabbing ) // Check if the primary hand trigger is pressed while grabbing
         {
             ChangeSkybox();
         }
@@ -24,17 +24,17 @@ public class NightMode : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("hand")) // Assuming your Oculus Quest Controller's collider is tagged as "Hand"
+        if (other.CompareTag("hand")&& isGrabbing==false) // Assuming your Oculus Quest Controller's collider is tagged as "Hand"
         {
-            isGrabbing = true; // Set the flag to true when the controller collider enters the object's collider
+            isGrabbing = true; Debug.Log('1');// Set the flag to true when the controller collider enters the object's collider
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("hand"))
+        if (other.CompareTag("hand")&& isGrabbing==true)
         {
-            isGrabbing = false; // Reset the flag to false when the controller collider exits the object's collider
+            isGrabbing = false; Debug.Log('0');// Reset the flag to false when the controller collider exits the object's collider
         }
     }
 

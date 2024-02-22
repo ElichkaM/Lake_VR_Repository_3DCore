@@ -52914,6 +52914,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5485511582212811338, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
+      propertyPath: _controllerButtonUsage
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 5579247632793904256, guid: 71e17352d0532ef4583a79fd9a8f35fa, type: 3}
       propertyPath: m_TagString
       value: hand

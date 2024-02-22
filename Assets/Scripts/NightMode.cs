@@ -4,19 +4,26 @@ using UnityEngine;
 using UnityEngine.Events;
 using OculusSampleFramework;
 
-
-
 public class NightMode : MonoBehaviour
 {
     [SerializeField] private Material[] skyboxMaterials; // Array of skybox materials to cycle through
     [SerializeField] private UnityEvent[] events; // Unity events to trigger when changing skybox
+    [SerializeField] private AudioClip hapticAudioClip; // Audio clip for haptic feedback
+    [SerializeField] private AudioClip collisionAudioClip; // Audio clip for collision feedback
 
     private int currentIndex = 0; // Index of the current skybox material
-    private bool isGrabbing =false; // Flag to track if the object is being grabbed
+    private bool isGrabbing = false; // Flag to track if the object is being grabbed
+    private AudioSource audioSource; // AudioSource component for playing audio feedback
+
+    void Start()
+    {
+        // Get the AudioSource component attached to this GameObject
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
-        if (isGrabbing ) // Check if the primary hand trigger is pressed while grabbing
+        if (isGrabbing && OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)) // Check if the primary hand trigger is pressed while grabbing
         {
             ChangeSkybox();
         }
@@ -24,17 +31,27 @@ public class NightMode : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("hand")&& isGrabbing==false) // Assuming your Oculus Quest Controller's collider is tagged as "Hand"
+        if (other.CompareTag("hand")) // Assuming your Oculus Quest Controller's collider is tagged as "Hand"
         {
-            isGrabbing = true; Debug.Log('1');// Set the flag to true when the controller collider enters the object's collider
+            isGrabbing = true;
+
+            // Trigger haptic feedback when the controller enters the object's collider
+            OVRHapticsClip hapticsClip = new OVRHapticsClip(hapticAudioClip);
+            OVRHaptics.RightChannel.Mix(hapticsClip);
+
+            // Play collision audio feedback
+            if (audioSource != null && collisionAudioClip != null)
+            {
+                audioSource.PlayOneShot(collisionAudioClip);
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("hand")&& isGrabbing==true)
+        if (other.CompareTag("hand"))
         {
-            isGrabbing = false; Debug.Log('0');// Reset the flag to false when the controller collider exits the object's collider
+            isGrabbing = false;
         }
     }
 

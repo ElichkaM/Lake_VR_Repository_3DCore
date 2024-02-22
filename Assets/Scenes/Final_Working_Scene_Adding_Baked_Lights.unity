@@ -790,6 +790,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1cc6e6796f833a94f94e6d794ca654c3, type: 2}
   events: []
   hapticAudioClip: {fileID: 8300000, guid: 89527bd1af4c9a64bace730bc0689655, type: 3}
+  collisionAudioClip: {fileID: 8300000, guid: 89527bd1af4c9a64bace730bc0689655, type: 3}
 --- !u!114 &5949677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24868,6 +24869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowingPollen: {fileID: 880420635}
   hapticAudioClip: {fileID: 8300000, guid: 89527bd1af4c9a64bace730bc0689655, type: 3}
+  collisionAudioClip: {fileID: 8300000, guid: b6016b4426ec4c14e9b8b6023a435051, type: 3}
 --- !u!1001 &442624028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59992,6 +59994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowingPollen: {fileID: 880420635}
   hapticAudioClip: {fileID: 0}
+  collisionAudioClip: {fileID: 0}
 --- !u!1001 &1162770229
 PrefabInstance:
   m_ObjectHideFlags: 0

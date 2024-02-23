@@ -9,6 +9,8 @@ public class GlowingFlowerController : MonoBehaviour
     public AudioClip collisionAudioClip; // Audio clip for collision feedback
 
     private AudioSource audioSource; // Reference to the AudioSource component
+    float delay;
+    
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class GlowingFlowerController : MonoBehaviour
             audioSource.PlayOneShot(collisionAudioClip);
 
             // Start a coroutine to stop the particle system after a delay
-            StartCoroutine(StopParticleAfterDelay(3f));
+            StartCoroutine(StopParticleAfterDelay(delay));
         }
     }
 
@@ -44,7 +46,7 @@ public class GlowingFlowerController : MonoBehaviour
     IEnumerator StopParticleAfterDelay(float delay)
     {
         // Wait for the specified delay
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.2f);
 
         // Stop the Glowing Pollen particle system
         glowingPollen.Stop();

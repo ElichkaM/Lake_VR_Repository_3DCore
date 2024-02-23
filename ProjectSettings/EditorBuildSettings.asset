@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: f3ffbd1db832efe4e897ee640b19253d
+  - enabled: 1
+    path: Assets/Scenes/N_NewTerrain.unity
+    guid: a30b48221292a414bac5528a4adc68bf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b741a7be5243245428928b83d11867e0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eefe80ef7517f154e9861fb8f1e0f38b, type: 2}

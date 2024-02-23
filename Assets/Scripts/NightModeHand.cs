@@ -13,7 +13,7 @@ public class NightModeHand : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Hand")) // Assuming your hand collider is tagged as "Hand"
+        if (other.CompareTag("hand")) // Assuming your hand collider is tagged as "Hand"
         {
             ChangeSkybox();
         }

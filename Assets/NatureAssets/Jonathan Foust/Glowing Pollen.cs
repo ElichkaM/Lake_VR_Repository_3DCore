@@ -6,17 +6,15 @@ public class GlowingFlowerController : MonoBehaviour
 {
     public ParticleSystem glowingPollen; // Reference to the Glowing Pollen particle system
     public AudioClip hapticAudioClip; // Audio clip for haptic feedback
-    public AudioClip collisionAudioClip; // Audio clip for collision feedback
+    float delay;
 
-    private AudioSource audioSource; // Reference to the AudioSource component
 
     void Start()
     {
         // Ensure the particle system is stopped when the game starts
         glowingPollen.Stop();
 
-        // Get the AudioSource component attached to this GameObject
-        audioSource = GetComponent<AudioSource>();
+     
     }
 
     // OnTriggerEnter is called when the Collider other enters the trigger
@@ -32,11 +30,10 @@ public class GlowingFlowerController : MonoBehaviour
             OVRHapticsClip hapticsClip = new OVRHapticsClip(hapticAudioClip);
             OVRHaptics.RightChannel.Mix(hapticsClip);
 
-            // Play collision audio feedback
-            audioSource.PlayOneShot(collisionAudioClip);
+    
 
             // Start a coroutine to stop the particle system after a delay
-            StartCoroutine(StopParticleAfterDelay(3f));
+            StartCoroutine(StopParticleAfterDelay(delay));
         }
     }
 

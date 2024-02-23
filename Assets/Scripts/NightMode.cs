@@ -9,16 +9,14 @@ public class NightMode : MonoBehaviour
     [SerializeField] private Material[] skyboxMaterials; // Array of skybox materials to cycle through
     [SerializeField] private UnityEvent[] events; // Unity events to trigger when changing skybox
     [SerializeField] private AudioClip hapticAudioClip; // Audio clip for haptic feedback
-    [SerializeField] private AudioClip collisionAudioClip; // Audio clip for collision feedback
+   
 
     private int currentIndex = 0; // Index of the current skybox material
     private bool isGrabbing = false; // Flag to track if the object is being grabbed
-    private AudioSource audioSource; // AudioSource component for playing audio feedback
+  
 
     void Start()
     {
-        // Get the AudioSource component attached to this GameObject
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -38,12 +36,6 @@ public class NightMode : MonoBehaviour
             // Trigger haptic feedback when the controller enters the object's collider
             OVRHapticsClip hapticsClip = new OVRHapticsClip(hapticAudioClip);
             OVRHaptics.RightChannel.Mix(hapticsClip);
-
-            // Play collision audio feedback
-            if (audioSource != null && collisionAudioClip != null)
-            {
-                audioSource.PlayOneShot(collisionAudioClip);
-            }
         }
     }
 
